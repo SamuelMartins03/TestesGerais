@@ -1,19 +1,20 @@
 using Photon.Pun;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class LobbyManager : MonoBehaviourPunCallbacks
+public class LobbyManager : MonoBehaviour
 {
-
-    [SerializeField] string RoomName;
-
+    // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        
     }
 
-    public override void OnConnectedToMaster()
+    // Update is called once per frame
+    void Update()
     {
-        PhotonNetwork.JoinLobby();
+        
     }
 
     public void CreateRoom()
@@ -24,6 +25,4 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.JoinRoom("");
     }
-
-
 }
