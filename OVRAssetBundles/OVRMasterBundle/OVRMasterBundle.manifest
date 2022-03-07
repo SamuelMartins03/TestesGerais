@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 2941055415
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: asset_resources
+      Dependencies:
+        Dependency_0: asset_shader0
+        Dependency_1: asset_ttf0
+    Info_1:
+      Name: scene_loading
+      Dependencies:
+        Dependency_0: asset_resources
+    Info_2:
+      Name: scene_lobby
+      Dependencies:
+        Dependency_0: asset_resources
+    Info_3:
+      Name: asset_psd0
+      Dependencies: {}
+    Info_4:
+      Name: asset_shader0
+      Dependencies: {}
+    Info_5:
+      Name: asset_ttf0
+      Dependencies: {}

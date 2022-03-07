@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 457415535
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a7e10881cb17370a79e278fce6032415
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4de8b25cbd6d858cd4c6ce40521297b9
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/TextMesh Pro/Examples & Extras/Fonts/Bangers.ttf
+- Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+- Assets/TextMesh Pro/Examples & Extras/Fonts/Electronic Highway Sign.TTF
+Dependencies: []
