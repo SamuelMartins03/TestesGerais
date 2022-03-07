@@ -1,28 +1,28 @@
 using Photon.Pun;
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class LobbyManager : MonoBehaviour
+public class LobbyManager : MonoBehaviourPun
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] TMPro.TMP_InputField NewRoomName;
+    [SerializeField] GameObject RoomsContainer;
 
     public void CreateRoom()
     {
-        PhotonNetwork.CreateRoom("");
+        this.photonView.RPC("SaveRoomCreated", RpcTarget.AllBuffered, NewRoomName.text);
+        //PhotonNetwork.CreateRoom(NewRoomName.text);
     }
     public void JoinRoom()
     {
         PhotonNetwork.JoinRoom("");
+    }
+
+    [PunRPC]
+    void SaveRoomCreated(string RoomName)
+    {
+        GameObject RoomCreatedButton = PhotonNetwork.Instantiate("Button_RoomCreatedName", transform.position, Quaternion.identity);
+        RoomCreatedButton.transform.SetParent(GameObject.FindGameObjectWithTag("RoomsAvaliableConteiner").transform);
+        RoomCreatedButton.GetComponentInChildren<TMPro.TMP_Text>().text = RoomName;
     }
 }
